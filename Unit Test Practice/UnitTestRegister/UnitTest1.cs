@@ -10,34 +10,42 @@ namespace UnitTestRegister
     public class UnitTest1
     {
         [TestMethod]
-        public void AddUpItems_CheckExpectedTotal()
+        public void AddUpItems_AddingMultipleItems_ReturnsAccurateTotal()
         {
-        //ARRANGE
-            //member variables, instantiate objects, set "expected" value
+            // Arrange
+            // Member variables, instantiate objects, set "expected" value
 
-            //bringing in my instance of Register
-      
+            // Bringing in my instance of Register      
             Register register = new Register();
 
-            //Creating item objects
+            // Creating item objects
             Item CatFood = new Item("Cat Food", 12.50);
             Item HotPockets = new Item("Hot Pockets", 2.99);
 
-            //creating list of objects
+            // Creating list of objects
             List<Item> items = new List<Item>();
             items.Add(CatFood);
             items.Add(HotPockets);
 
-            //set expected value (not accounting for sales tax)
+            // set expected value (not accounting for sales tax)
             double expected = 15.49;
- d
-
-        //ACT 
-            //call method
+ 
+            // Act
+            // Call method that we are testing
             double actual = register.AddUpItems(items);
 
-            //Assert
+            // Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Test_Method_ChangeThisName()
+        {
+            // Assert
+            
+            // Act
+
+            // Assert
         }
     }
 }

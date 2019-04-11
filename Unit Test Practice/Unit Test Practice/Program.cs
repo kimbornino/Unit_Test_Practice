@@ -10,9 +10,9 @@ namespace RegisterSystem
     {
         static void Main(string[] args)
         {
-            //Example of how to instantiate instances of items
-            Item CatFood = new Item("CatFood", 12.99);
-            Item Cookies = new Item("Cookeis", 3.50);
+            // Example of how to instantiate instances of items
+            Item CatFood = new Item("Cat Food", 12.99);
+            Item Cookies = new Item("Cookies", 3.50);
         }
     }
 }

@@ -9,14 +9,16 @@ namespace RegisterSystem
 {
     public class Register
     {
-        Customer customer;
+        // member variables
 
+        // constructor
         public Register()
         {
-            customer = new Customer();
+            
         }
 
-        //If the number is even, it's taxable.  If the number is odd, it's not taxable
+        // member methods
+        // If the number is even, it's taxable.  If the number is odd, it's not taxable
         public void CalculateSalesTax(Item item)
         {
             if (item.price % 2 == 0)
@@ -25,7 +27,7 @@ namespace RegisterSystem
             }
         }
 
-        //Add up the cost of each item in a customer's list
+        // Add up the cost of each item in a customer's list
         public double AddUpItems(List<Item> items)
         {
             double itemTotal = 0;
@@ -38,8 +40,8 @@ namespace RegisterSystem
             return itemTotal;
         }
 
-        //Deducts amount from customer based on their purchase total
-        public void AcceptPayment(Double itemTotal, Customer customer)
+        // Deducts amount from customer based on their purchase total
+        public void AcceptPayment(double itemTotal, Customer customer)
         {
             customer.money -= itemTotal; 
         }
